@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>骑自行车的鹈鹕</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4efe4;
+      --ink: #2c3338;
+      --muted: #5c675f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(ellipse at 50% 0%, #fffaf0 0%, var(--paper) 55%, #e7e0d0 100%);
+      color: var(--ink);
+      font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", Palatino, "Palatino Linotype", serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.4rem 1rem 0.2rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: 0.28em;
+    }
+
+    header p {
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      letter-spacing: 0.42em;
+      font-size: 0.78rem;
+      font-family: "PingFang SC", "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+    }
+
+    main {
+      width: min(980px, 100%);
+      padding: 0.8rem 1rem 2rem;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(60, 48, 28, 0.14);
+    }
+
+    figcaption {
+      margin-top: 0.75rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>骑自行车的鹈鹕</h1>
+    <p>HTML5 · SVG</p>
+  </header>
+  <main>
+    <figure>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="pic-title pic-desc">
+        <title id="pic-title">骑自行车的鹈鹕</title>
+        <desc id="pic-desc">一只白色鹈鹕坐在自行车座上，长喙朝向前方，翅膀扶着车把，蹼足踩着脚踏，沿着乡间小路骑行。</desc>
+
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#7ec8ea"/>
+            <stop offset="58%" stop-color="#d7f1fb"/>
+            <stop offset="100%" stop-color="#f7fcff"/>
+          </linearGradient>
+          <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8ed18a"/>
+            <stop offset="100%" stop-color="#3f8f4c"/>
+          </linearGradient>
+          <linearGradient id="beak" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffd27a"/>
+            <stop offset="100%" stop-color="#ef7d1a"/>
+          </linearGradient>
+          <linearGradient id="pouch" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffd7a8"/>
+            <stop offset="55%" stop-color="#f3a15a"/>
+            <stop offset="100%" stop-color="#e07a34"/>
+          </linearGradient>
+          <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#fff6c9"/>
+            <stop offset="45%" stop-color="#ffe08a"/>
+            <stop offset="100%" stop-color="#ffe08a" stop-opacity="0"/>
+          </radialGradient>
+          <clipPath id="body-clip">
+            <path d="M352 336 C342 276 398 236 470 238 C528 240 552 278 544 324 C536 372 492 400 430 396 C376 392 358 372 352 336 Z"/>
+          </clipPath>
+        </defs>
+
+        <rect width="960" height="640" fill="url(#sky)"/>
+        <circle cx="150" cy="118" r="92" fill="url(#sun)"/>
+        <circle cx="150" cy="118" r="40" fill="#ffe7a0"/>
+
+        <g fill="#ffffff" opacity="0.92">
+          <g transform="translate(300,92)">
+            <ellipse cx="0" cy="10" rx="34" ry="20"/>
+            <ellipse cx="28" cy="6" rx="28" ry="18"/>
+            <ellipse cx="52" cy="14" rx="24" ry="15"/>
+          </g>
+          <g transform="translate(620,70)">
+            <ellipse cx="0" cy="12" rx="40" ry="22"/>
+            <ellipse cx="36" cy="4" rx="30" ry="18"/>
+            <ellipse cx="-28" cy="10" rx="26" ry="16"/>
+          </g>
+          <g transform="translate(820,130)" opacity="0.85">
+            <ellipse cx="0" cy="8" rx="30" ry="16"/>
+            <ellipse cx="26" cy="4" rx="22" ry="14"/>
+          </g>
+        </g>
+
+        <path d="M0 455 C150 410 260 448 390 430 C540 408 690 458 820 424 C900 406 940 418 960 412 V520 H0 Z" fill="#b7e4cf"/>
+        <path d="M0 500 C170 468 330 528 520 498 C700 470 840 520 960 490 V640 H0 Z" fill="url(#grass)"/>
+        <path d="M0 572 C220 552 480 598 720 566 C840 552 920 568 960 560 V640 H0 Z" fill="#c5ced6"/>
+        <path d="M0 572 C220 552 480 598 720 566 C840 552 920 568 960 560" fill="none" stroke="#aeb8c2" stroke-width="3"/>
+        <g stroke="#f7fafc" stroke-width="4" stroke-linecap="round" opacity="0.85">
+          <line x1="70" y1="604" x2="130" y2="600"/>
+          <line x1="200" y1="612" x2="270" y2="606"/>
+          <line x1="360" y1="618" x2="430" y2="612"/>
+          <line x1="530" y1="608" x2="600" y2="614"/>
+          <line x1="700" y1="600" x2="770" y2="606"/>
+          <line x1="850" y1="610" x2="910" y2="604"/>
+        </g>
+
+        <g fill="#3f8f4c">
+          <path d="M78 548 q6-18 0-28 q8 10 4 28 Z"/>
+          <path d="M96 552 q8-22 2-32 q6 12 2 32 Z"/>
+          <path d="M868 546 q7-20 1-30 q7 12 2 30 Z"/>
+          <path d="M888 550 q6-16 0-24 q8 8 3 24 Z"/>
+        </g>
+        <g>
+          <g transform="translate(118,546)">
+            <line x1="0" y1="0" x2="0" y2="18" stroke="#3f8f4c" stroke-width="2"/>
+            <circle cx="0" cy="0" r="5" fill="#fff"/>
+            <circle cx="0" cy="0" r="2" fill="#f0b429"/>
+          </g>
+          <g transform="translate(842,542)">
+            <line x1="0" y1="0" x2="1" y2="20" stroke="#3f8f4c" stroke-width="2"/>
+            <circle cx="0" cy="0" r="5" fill="#fff6fb"/>
+            <circle cx="0" cy="0" r="2" fill="#ef7d9a"/>
+          </g>
+        </g>
+
+        <ellipse cx="470" cy="608" rx="250" ry="14" fill="#1c2b22" opacity="0.13"/>
+
+        <!-- 车轮 -->
+        <g transform="translate(270,530)">
+          <circle r="72" fill="#2c3140"/>
+          <circle r="58" fill="#e7eef3"/>
+          <g stroke="#8b98a6" stroke-width="2" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-54"/>
+            <line x1="0" y1="0" x2="27" y2="-46.8"/>
+            <line x1="0" y1="0" x2="46.8" y2="-27"/>
+            <line x1="0" y1="0" x2="54" y2="0"/>
+            <line x1="0" y1="0" x2="46.8" y2="27"/>
+            <line x1="0" y1="0" x2="27" y2="46.8"/>
+            <line x1="0" y1="0" x2="0" y2="54"/>
+            <line x1="0" y1="0" x2="-27" y2="46.8"/>
+            <line x1="0" y1="0" x2="-46.8" y2="27"/>
+            <line x1="0" y1="0" x2="-54" y2="0"/>
+            <line x1="0" y1="0" x2="-46.8" y2="-27"/>
+            <line x1="0" y1="0" x2="-27" y2="-46.8"/>
+          </g>
+          <circle r="58" fill="none" stroke="#4a5564" stroke-width="3.5"/>
+          <path d="M-28 -62 A66 66 0 0 1 34 -58" fill="none" stroke="#8d98a6" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <circle r="12" fill="#3e4654"/>
+          <circle r="5" fill="#d5dde4"/>
+        </g>
+        <g transform="translate(660,530)">
+          <circle r="72" fill="#2c3140"/>
+          <circle r="58" fill="#e7eef3"/>
+          <g stroke="#8b98a6" stroke-width="2" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-54"/>
+            <line x1="0" y1="0" x2="27" y2="-46.8"/>
+            <line x1="0" y1="0" x2="46.8" y2="-27"/>
+            <line x1="0" y1="0" x2="54" y2="0"/>
+            <line x1="0" y1="0" x2="46.8" y2="27"/>
+            <line x1="0" y1="0" x2="27" y2="46.8"/>
+            <line x1="0" y1="0" x2="0" y2="54"/>
+            <line x1="0" y1="0" x2="-27" y2="46.8"/>
+            <line x1="0" y1="0" x2="-46.8" y2="27"/>
+            <line x1="0" y1="0" x2="-54" y2="0"/>
+            <line x1="0" y1="0" x2="-46.8" y2="-27"/>
+            <line x1="0" y1="0" x2="-27" y2="-46.8"/>
+          </g>
+          <circle r="58" fill="none" stroke="#4a5564" stroke-width="3.5"/>
+          <path d="M-28 -62 A66 66 0 0 1 34 -58" fill="none" stroke="#8d98a6" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <circle r="12" fill="#3e4654"/>
+          <circle r="5" fill="#d5dde4"/>
+        </g>
+
+        <!-- 车架 -->
+        <g fill="none" stroke="#e14b45" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M270 530 L455 508"/>
+          <path d="M278 542 L462 516"/>
+          <path d="M270 522 L392 396"/>
+          <path d="M385 388 L455 508"/>
+          <path d="M385 388 L600 400"/>
+          <path d="M455 508 L600 400"/>
+          <path d="M586 408 L648 528"/>
+          <path d="M612 404 L672 528"/>
+        </g>
+        <path d="M592 408 L612 372" fill="none" stroke="#e14b45" stroke-width="12" stroke-linecap="round"/>
+
+        <g fill="none" stroke="#3a3f4b" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 3.5">
+          <path d="M284 516 L432 486"/>
+          <path d="M286 540 L438 528"/>
+        </g>
+        <circle cx="455" cy="508" r="26" fill="none" stroke="#3a3f4b" stroke-width="7"/>
+        <circle cx="455" cy="508" r="7" fill="#3a3f4b"/>
+        <g stroke="#2c3140" stroke-width="7" stroke-linecap="round">
+          <line x1="455" y1="508" x2="489" y2="544"/>
+          <line x1="455" y1="508" x2="421" y2="472"/>
+        </g>
+        <rect x="476" y="540" width="28" height="9" rx="2.5" fill="#2c3140"/>
+        <rect x="404" y="466" width="28" height="9" rx="2.5" fill="#2c3140"/>
+
+        <path d="M385 388 L352 370" fill="none" stroke="#6b4632" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="332" cy="366" rx="42" ry="11" transform="rotate(-16 332 366)" fill="#6b3a28"/>
+        <ellipse cx="326" cy="362" rx="28" ry="5" transform="rotate(-16 326 362)" fill="#8a5340" opacity="0.7"/>
+
+        <circle cx="392" cy="430" r="5" fill="#c0392b"/>
+        <circle cx="608" cy="408" r="4" fill="#f4f7fb" stroke="#c5ced6"/>
+
+        <!-- 远处的翅膀 -->
+        <path d="M468 268 C530 214 610 228 668 292 C612 270 540 274 486 308 Z" fill="#e6dfd4"/>
+        <path d="M600 236 C652 236 688 270 676 300 C640 278 610 262 600 236 Z" fill="#2c3140"/>
+
+        <!-- 尾羽 -->
+        <g>
+          <path d="M360 318 C320 300 292 312 286 334 C324 328 352 332 368 340 Z" fill="#f7f3ec" stroke="#e4dcd0" stroke-width="1.5"/>
+          <path d="M358 340 C312 338 278 356 274 378 C322 366 350 360 372 362 Z" fill="#f3eee6" stroke="#e4dcd0" stroke-width="1.5"/>
+          <path d="M364 358 C330 372 308 396 322 408 C352 392 372 376 378 366 Z" fill="#efe8de" stroke="#e4dcd0" stroke-width="1.5"/>
+        </g>
+
+        <!-- 身体 -->
+        <path d="M500 275 C548 214 582 178 598 162" fill="none" stroke="#e4dcd0" stroke-width="48" stroke-linecap="round"/>
+        <path d="M352 336 C342 276 398 236 470 238 C528 240 552 278 544 324 C536 372 492 400 430 396 C376 392 358 372 352 336 Z" fill="#fffaf4" stroke="#e4dcd0" stroke-width="3"/>
+        <ellipse cx="470" cy="352" rx="62" ry="36" fill="#e7dfd4" opacity="0.85" clip-path="url(#body-clip)"/>
+        <path d="M500 275 C548 214 582 178 598 162" fill="none" stroke="#fffaf4" stroke-width="40" stroke-linecap="round"/>
+
+        <g fill="none" stroke="#e4dcd0" stroke-width="2" stroke-linecap="round" opacity="0.9">
+          <path d="M390 300 C430 292 470 300 500 318"/>
+          <path d="M382 322 C430 314 474 324 508 344"/>
+        </g>
+
+        <!-- 头与喙 -->
+        <path d="M548 132 C534 112 548 108 562 118 C548 116 542 128 552 140 Z" fill="#efe8de"/>
+        <path d="M538 146 C520 132 524 150 540 158 Z" fill="#e7dfd4"/>
+        <circle cx="604" cy="156" r="36" fill="#fffaf4" stroke="#e4dcd0" stroke-width="3"/>
+
+        <path d="M624 142 C700 112 780 118 842 146 L832 166 C760 150 690 152 626 170 Z" fill="url(#beak)" stroke="#e07a20" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M626 168 C700 178 780 172 836 156 C812 206 742 246 662 244 C612 242 586 206 596 180 Z" fill="url(#pouch)" stroke="#d97832" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M626 168 C700 160 770 154 834 160" fill="none" stroke="#c2611c" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M700 136 q10 1 8 8" fill="none" stroke="#c2611c" stroke-width="2" stroke-linecap="round"/>
+        <ellipse cx="742" cy="196" rx="36" ry="16" fill="#fff" opacity="0.28"/>
+
+        <circle cx="624" cy="148" r="9" fill="#fff"/>
+        <circle cx="626" cy="149" r="5" fill="#1b1b1b"/>
+        <circle cx="628" cy="147.2" r="1.8" fill="#fff"/>
+        <path d="M612 138 Q626 132 640 140" fill="none" stroke="#2c3140" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- 腿与蹼 -->
+        <g fill="none" stroke="#f0a04a" stroke-width="11" stroke-linecap="round">
+          <path d="M430 390 C424 430 410 456 418 470"/>
+          <path d="M468 392 C486 440 498 490 492 536"/>
+        </g>
+        <path d="M404 468 C430 458 454 468 458 482 C434 490 408 486 400 474 Z" fill="#f0a04a" stroke="#d4843a" stroke-width="1.5"/>
+        <path d="M478 534 C508 522 534 530 542 546 C514 556 486 554 470 542 Z" fill="#f0a04a" stroke="#d4843a" stroke-width="1.5"/>
+        <g fill="none" stroke="#d4843a" stroke-width="1.6" stroke-linecap="round">
+          <path d="M412 470 L448 462"/>
+          <path d="M410 476 L446 476"/>
+          <path d="M412 482 L440 488"/>
+          <path d="M486 536 L534 528"/>
+          <path d="M484 544 L536 544"/>
+          <path d="M486 550 L522 556"/>
+        </g>
+
+        <!-- 车把 -->
+        <path d="M600 400 C614 360 628 342 642 328" fill="none" stroke="#e14b45" stroke-width="11" stroke-linecap="round"/>
+        <path d="M548 346 C610 292 700 300 748 350" fill="none" stroke="#2c3140" stroke-width="10" stroke-linecap="round"/>
+        <path d="M534 348 C528 338 534 328 548 332" fill="none" stroke="#2c3140" stroke-width="10" stroke-linecap="round"/>
+        <path d="M742 344 C758 338 766 348 754 360" fill="none" stroke="#2c3140" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="566" cy="328" r="9" fill="#f2c14e" stroke="#c8962e" stroke-width="2"/>
+        <circle cx="566" cy="328" r="3" fill="#fff6d2"/>
+
+        <!-- 近侧翅膀，搭在车把上 -->
+        <path d="M458 300 C530 268 600 286 668 332 C688 348 672 366 640 360 C575 348 510 360 456 348 C430 340 434 312 458 300 Z" fill="#fffaf4" stroke="#e4dcd0" stroke-width="3"/>
+        <path d="M612 322 C660 304 700 318 724 342 C690 336 658 342 634 350 Z" fill="#2c3140"/>
+        <path d="M598 340 C652 334 696 352 724 372 C684 360 646 356 620 352 Z" fill="#242833"/>
+        <g fill="none" stroke="#e4dcd0" stroke-width="2" stroke-linecap="round">
+          <path d="M490 312 C550 306 610 318 655 340"/>
+          <path d="M484 330 C548 324 604 336 648 354"/>
+        </g>
+        <path d="M640 348 C662 336 688 340 700 352 C678 356 656 358 642 360 Z" fill="#fffaf4" opacity="0.95"/>
+      </svg>
+      <figcaption>白色鹈鹕扶着车把，踩着脚踏，在小路向前骑。</figcaption>
+    </figure>
+  </main>
+</body>
+</html>
